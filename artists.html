@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Великі митці - Світ мистецтва</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header header"
+        "menu main main side"
+        "footer footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+      grid-template-rows: 120px auto 100px;
+      gap: 5px;
+      min-height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background: lightblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .menu {
+      grid-area: menu;
+      background: #f8d7c5;
+      padding: 15px;
+    }
+
+    .main {
+      grid-area: main;
+      background: #d8f0d0;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    .side {
+      grid-area: side;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 5px;
+    }
+
+    .block4 {
+      background: #f8d7c5;
+      padding: 10px;
+    }
+    .block5 {
+      background: white;
+      padding: 10px;
+    }
+    .block6 {
+      background: #d8f0d0;
+      padding: 10px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: lightblue;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu li {
+      margin: 8px 0;
+    }
+
+    .menu a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+
+    .current {
+      color: darkblue;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎨 Світ мистецтва</h1>
+            <h2>Великі митці: творці вічності</h2>
+        </header>
+        
+        <nav class="menu">
+            <h3>Меню навігації</h3>
+            <ul>
+                <li><a href="index.html">Головна сторінка</a></li>
+                <li><a href="history.html">Історія мистецтва</a></li>
+                <li><a href="styles.html">Художні стилі</a></li>
+                <li><a href="artists.html" class="current">Великі митці</a></li>
+                <li><a href="gallery.html">Віртуальна галерея</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main">
+            <div class="content-block">
+                <h3>Найвідоміші художники всіх часів</h3>
+                <ol>
+                    <li id="davinci">Леонардо да Вінчі (1452-1519)
+                        <ul>
+                            <li>Мона Ліза</li>
+                            <li>Тайна вечеря</li>
+                            <li>Вітрувіанська людина</li>
+                        </ul>
+                    </li>
+                    <li id="michelangelo">Мікеланджело Буонарроті (1475-1564)
+                        <ul>
+                            <li>Страшний суд</li>
+                            <li>Сотворіння Адама</li>
+                            <li>Давид</li>
+                        </ul>
+                    </li>
+                    <li id="monet">Клод Моне (1840-1926)
+                        <ul>
+                            <li>Водяні лілії</li>
+                            <li>Імпресія. Схід сонця</li>
+                            <li>Собор у Руані</li>
+                        </ul>
+                    </li>
+                    <li>Пабло Пікассо (1881-1973)</li>
+                    <li>Вінсент ван Гог (1853-1890)</li>
+                </ol>
+            </div>
+            
+            <div class="content-block">
+                <div class="block4"> 
+                <h3>Галерея портретів митців</h3>
+                <div class="art-gallery">
+                    <div class="artwork">
+                        <img src="images/1.jpg" alt="Леонардо да Вінчі">
+                        <div class="artwork-info">
+                            <div class="artwork-title">Леонардо да Вінчі</div>
+                            <div class="artwork-artist">Автопортрет</div>
+                            <div class="artwork-year">1512</div>
+                        </div>
+                    </div>
+                    <div class="artwork">
+                        <img src="images/2.jpg" alt="Мікеланджело">
+                        <div class="artwork-info">
+                            <div class="artwork-title">Мікеланджело</div>
+                            <div class="artwork-artist">Портрет</div>
+                            <div class="artwork-year">1535</div>
+                        </div>
+                    </div>
+                    <div class="artwork">
+                        <img src="images/3.webp" alt="Клод Моне">
+                        <div class="artwork-info">
+                            <div class="artwork-title">Клод Моне</div>
+                            <div class="artwork-artist">Фотопортрет</div>
+                            <div class="artwork-year">1899</div>
+                        </div>
+                    </div>
+                  <div>
+               </div>
+           </div>
+       </main>
+        
+        <aside class="aside">
+            <div class="content-block">
+                <div class="block5">  
+                <h3>Митець поколінь</h3>
+                <img src="images/4.webp" alt="Леонардо да Вінчі" style="width:100%; border-radius:5px;">
+                <p><strong>Леонардо да Вінчі</strong> – італійський геній епохи Відродження, який поєднав мистецтво, науку та інженерію.</p>
+            </div>
+            <div class="content-block">
+                <h3>Цитати митців</h3>
+                <p>"Мистецтво ніколи не завершене, лише покинуте." – Леонардо да Вінчі</p>
+            </div>
+         </div>
+       </aside>
+      <div class="block6">
+        <p>(Тут може бути ваша реклама :3)</p>
+      </div>
+    </div>  
+        <footer class="footer">
+            <p><span class="highlight">Світ мистецтва</span> | Великі митці</p>
+            <h3>Цікаво знати</h3>
+        </footer>
+    </div>
+</body>
+</html>

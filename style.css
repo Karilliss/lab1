@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "menu main main side"
+    "footer footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: 120px auto 100px;
+  gap: 5px;
+  min-height: 100vh;
+}
+
+/* Блок 1 */
+.header {
+  grid-area: header;
+  background: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.header h2 {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+/* Блок 2 */
+.menu {
+  grid-area: menu;
+  background: #f8d7c5;
+  padding: 15px;
+}
+
+.menu h3 {
+  margin-top: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 8px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.menu a.current {
+  color: darkblue;
+}
+
+/* Блок 3 */
+.main {
+  grid-area: main;
+  background: #d8f0d0;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.content-block {
+  background: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* Блоки 4–6 */
+.side {
+  grid-area: side;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.block4 {
+  background: #f8d7c5;
+  padding: 10px;
+}
+
+.block5 {
+  background: white;
+  padding: 10px;
+}
+
+.block6 {
+  background: #d8f0d0;
+  padding: 10px;
+}
+
+/* Блок 7 */
+.footer {
+  grid-area: footer;
+  background: lightblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer h3 {
+  margin: 0;
+}
+
+.highlight {
+  font-weight: bold;
+}

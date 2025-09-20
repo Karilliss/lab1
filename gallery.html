@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Віртуальна галерея - Світ мистецтва</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header header"
+        "menu main main side"
+        "footer footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+      grid-template-rows: 120px auto 100px;
+      gap: 5px;
+      min-height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background: lightblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .menu {
+      grid-area: menu;
+      background: #f8d7c5;
+      padding: 15px;
+    }
+
+    .main {
+      grid-area: main;
+      background: #d8f0d0;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    .side {
+      grid-area: side;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 5px;
+    }
+
+    .block4 {
+      background: #f8d7c5;
+      padding: 10px;
+    }
+    .block5 {
+      background: white;
+      padding: 10px;
+    }
+    .block6 {
+      background: #d8f0d0;
+      padding: 10px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: lightblue;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu li {
+      margin: 8px 0;
+    }
+
+    .menu a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+
+    .current {
+      color: darkblue;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>🎨 Світ мистецтва</h1>
+            <h2>Віртуальна галерея: шедеври світового мистецтва</h2>
+        </header>
+        
+        <nav class="menu">
+            <h3>Меню навігації</h3>
+            <ul>
+                <li><a href="index.html">Головна сторінка</a></li>
+                <li><a href="history.html">Історія мистецтва</a></li>
+                <li><a href="styles.html">Художні стилі</a></li>
+                <li><a href="artists.html">Великі митці</a></li>
+                <li><a href="gallery.html" class="current">Віртуальна галерея</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main">
+            <div class="content-block">
+                <h3>Шедеври світового живопису</h3>
+                <div class="art-gallery">
+                    <div class="artwork"><img src="images/5.jpg" alt="Мона Ліза"><div class="artwork-info"><div class="artwork-title">Мона Ліза</div><div class="artwork-artist">Леонардо да Вінчі</div><div class="artwork-year">1503-1506</div></div></div>
+                    <div class="artwork"><img src="images/6.webp" alt="Сотворіння Адама"><div class="artwork-info"><div class="artwork-title">Сотворіння Адама</div><div class="artwork-artist">Мікеланджело</div><div class="artwork-year">1512</div></div></div>
+                    <div class="artwork"><img src="images/7.jpg" alt="Дівчина з перлом"><div class="artwork-info"><div class="artwork-title">Дівчина з перлом</div><div class="artwork-artist">Ян Вермеєр</div><div class="artwork-year">1665</div></div></div>
+                    <div class="artwork"><img src="images/8.jpg" alt="Зоряна ніч"><div class="artwork-info"><div class="artwork-title">Зоряна ніч</div><div class="artwork-artist">Вінсент ван Гог</div><div class="artwork-year">1889</div></div></div>
+                    <div class="artwork"><img src="images/9.webp" alt="Три музики"><div class="artwork-info"><div class="artwork-title">Три музики</div><div class="artwork-artist">Пабло Пікассо</div><div class="artwork-year">1921</div></div></div>
+                    <div class="artwork"><img src="images/10.png" alt="Американська готика"><div class="artwork-info"><div class="artwork-title">Американська готика</div><div class="artwork-artist">Грант Вуд</div><div class="artwork-year">1930</div></div></div>
+                </div>
+            </div>
+            
+            <div class="content-block">
+                 <div class="block4">
+                <h3>Топ-10 найвідоміших картин</h3>
+                <ol>
+                    <li>Мона Ліза – Леонардо да Вінчі</li>
+                    <li>Сотворіння Адама – Мікеланджело</li>
+                    <li>Тайна вечеря – Леонардо да Вінчі</li>
+                    <li>Зоряна ніч – Вінсент ван Гог</li>
+                    <li>Крик – Едвард Мунк</li>
+                    <li>Дівчина з перлом – Ян Вермеєр</li>
+                    <li>Герніка – Пабло Пікассо</li>
+                    <li>Народження Венери – Сандро Боттічеллі</li>
+                    <li>Нічна варта – Рембрандт</li>
+                    <li>Постійство пам’яті – Сальвадор Далі</li>
+                </ol>
+               </div>
+            </div>
+        </main>
+        
+        <aside class="aside">
+            <div class="content-block">
+                 <div class="block5">
+                <h3>Віртуальні тури</h3>
+                <ul>
+                    <li><a href="https://artsandculture.google.com/" target="_blank">Google Arts & Culture</a></li>
+                    <li><a href="https://www.louvre.fr/en/online-tours" target="_blank">Віртуальний тур по Лувру</a></li>
+                    <li><a href="https://www.uffizi.it/en/online-tours" target="_blank">Віртуальний тур по Уффіці</a></li>
+                </ul>
+              </div>
+           </div>
+       </aside>
+
+         <div class="block6">
+        <p>Гарної подорожі у мистецтво!</p>
+      </div>
+    </div>
+        
+        <footer class="footer">
+            <p><span class="highlight">Світ мистецтва</span> | Віртуальна галерея</p>
+            <h3>Цікаво знати</h3>
+        </footer>
+    </div>
+</body>
+</html>

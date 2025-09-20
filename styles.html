@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Художні стилі - Світ мистецтва</title>
+    <link rel="stylesheet" href="style.css">
+ <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header header"
+        "menu main main side"
+        "footer footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+      grid-template-rows: 120px auto 100px;
+      gap: 5px;
+      min-height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background: lightblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .menu {
+      grid-area: menu;
+      background: #f8d7c5;
+      padding: 15px;
+    }
+
+    .main {
+      grid-area: main;
+      background: #d8f0d0;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    .side {
+      grid-area: side;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 5px;
+    }
+
+    .block4 {
+      background: #f8d7c5;
+      padding: 10px;
+    }
+    .block5 {
+      background: white;
+      padding: 10px;
+    }
+    .block6 {
+      background: #d8f0d0;
+      padding: 10px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: lightblue;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu li {
+      margin: 8px 0;
+    }
+
+    .menu a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+
+    .current {
+      color: darkblue;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎨 Світ мистецтва</h1>
+            <h2>Художні стилі: від класики до авангарду</h2>
+        </header>
+        
+        <nav class="menu">
+            <h3>Меню навігації</h3>
+            <ul>
+                <li><a href="index.html">Головна сторінка</a></li>
+                <li><a href="history.html">Історія мистецтва</a></li>
+                <li><a href="styles.html" class="current">Художні стилі</a></li>
+                <li><a href="artists.html">Великі митці</a></li>
+                <li><a href="gallery.html">Віртуальна галерея</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main">
+            <div class="content-block">
+                <h3 id="renaissance">Відродження</h3>
+                <img src="images/Відродження.jpg" alt="Приклад мистецтва Відродження" style="width:100%; border-radius:5px;">
+                <p>Характеризується зверненням до античної спадщини, гуманізмом, вивченням перспективи та анатомії.</p>
+                <p><strong>Представники:</strong> Леонардо да Вінчі, Мікеланджело, Рафаель</p>
+            </div>
+            
+            <div class="content-block">
+                <h3 id="baroque">Бароко</h3>
+                <img src="images/Бароко.jpg" alt="Приклад мистецтва Бароко" style="width:100%; border-radius:5px;">
+                <p>Пишність, динамізм, емоційність, контрасти світла й тіні.</p>
+                <p><strong>Представники:</strong> Караваджо, Рембрандт, Рубенс</p>
+            </div>
+            
+            <div class="content-block">
+                <h3 id="impressionism">Імпресіонізм</h3>
+                <img src="images/impressionism.webp" alt="Приклад імпресіонізму" style="width:100%; border-radius:5px;">
+                <p>Праця на пленері, передача миттєвості, використання світлих кольорів.</p>
+                <p><strong>Представники:</strong> Моне, Ренуар, Дега</p>
+            </div>
+            
+            <div class="content-block">
+               <div class="block4">
+                <h3>Сучасні стилі</h3>
+                <ul>
+                    <li>Абстракціонізм</li>
+                    <li>Сюрреалізм</li>
+                    <li>Поп-арт</li>
+                    <li>Мінімалізм</li>
+                    <li>Концептуальне мистецтво</li>
+                </ul>
+              </div>
+           </div>
+       </main>
+        
+        <aside class="aside">
+            <div class="content-block">
+               <div class="block5">
+                <h3>Порівняння стилів</h3>
+                <p><strong>Відродження:</strong> лінійна перспектива, сфумато</p>
+                <p><strong>Бароко:</strong> тенебризм, контрастність</p>
+                <p><strong>Імпресіонізм:</strong> роздільні мазки, світла палітра</p>
+            </div>
+          </div>
+       </aside>
+  <div class="block6">
+        <p>Варто відрізняти.</p>
+      </div>
+    </div>
+
+        
+        <footer class="footer">
+            <p><span class="highlight">Світ мистецтва</span> | Художні стилі</p>
+            <h3>Цікаво знати</h3>
+        </footer>
+    </div>
+</body>
+</html>

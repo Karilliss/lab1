@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Світ мистецтва - Головна</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header header"
+        "menu main main side"
+        "footer footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+      grid-template-rows: 120px auto 100px;
+      gap: 5px;
+      min-height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background: lightblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .menu {
+      grid-area: menu;
+      background: #f8d7c5;
+      padding: 15px;
+    }
+
+    .main {
+      grid-area: main;
+      background: #d8f0d0;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    .side {
+      grid-area: side;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 5px;
+    }
+
+    .block4 {
+      background: #f8d7c5;
+      padding: 10px;
+    }
+    .block5 {
+      background: white;
+      padding: 10px;
+    }
+    .block6 {
+      background: #d8f0d0;
+      padding: 10px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: lightblue;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu li {
+      margin: 8px 0;
+    }
+
+    .menu a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+
+    .current {
+      color: darkblue;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <header class="header">
+      <h1>🎨 Світ мистецтва</h1>
+      <h2>Відкрий для себе красу художнього вираження</h2>
+    </header>
+
+    
+    <nav class="menu">
+      <h3>Меню навігації</h3>
+      <ul>
+        <li><a href="index.html" class="current">Головна сторінка</a></li>
+        <li><a href="history.html">Історія мистецтва</a></li>
+        <li><a href="styles.html">Художні стилі</a></li>
+        <li><a href="artists.html">Великі митці</a></li>
+        <li><a href="gallery.html">Віртуальна галерея</a></li>
+      </ul>
+    </nav>
+
+    
+    <main class="main">
+      <div class="content-block">
+        <h3>Ласкаво просимо до світу мистецтва!</h3>
+        <p>Мистецтво - це універсальна мова, яка об'єднує людей усіх культур і епох.</p>
+      </div>
+
+      <div class="content-block">
+        <h3>Відродження: Золота доба мистецтва</h3>
+        <p>Епоха Відродження стала періодом розквіту мистецтва. Головною ідеєю епохи був гуманізм, коли людина і її здібності стали центром уваги, а мистецтво й наука розвивалися разом.</p>
+        <p>Архітектура епохи відзначалася симетрією, колонами та куполами, зразком інженерного генія став купол собору Санта-Марія-дель-Фйоре у Флоренції, зведений Брунеллескі без центральної опори.</p>
+      </div>
+    </main>
+
+   
+    <div class="side">
+      <div class="block4">
+        <h3>Цікаві факти</h3>
+        <p>Ван Гог продав лише одну картину за своє життя.</p>
+      </div>
+      <div class="block5">
+        <h3>Найвідоміші музеї світу</h3>
+        <ul>
+          <li>Лувр (Париж, Франція)</li>
+          <li>Метрополітен-музей (Нью-Йорк, США)</li>
+          <li>Британський музей (Лондон, Великобританія)</li>
+        </ul>
+      </div>
+      <div class="block6">
+        <p>Мистецтво надихає.</p>
+      </div>
+    </div>
+
+   
+    <footer class="footer">
+      <p><span class="highlight">Світ мистецтва</span></p>
+      <h3>Цікаво знати</h3>
+    </footer>
+  </div>
+</body>
+</html>
